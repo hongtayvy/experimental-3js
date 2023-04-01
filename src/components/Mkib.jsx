@@ -1,13 +1,22 @@
-import React, { useRef } from 'react'
-import { useGLTF } from '@react-three/drei'
+import React, { useRef } from "react";
+import { PerspectiveCamera, RenderTexture, Text } from "@react-three/drei";
+import { useFrame } from "@react-three/fiber";
 
-export default function Model(props) {
-  const { nodes, materials } = useGLTF('/mkib.gltf')
+const Cube = () => {
   return (
-    <group {...props} dispose={null}>
-      <mesh geometry={nodes.Object_2.geometry} material={materials.crate_texture} rotation={[-Math.PI / 2, 0, 0]} />
-    </group>
-  )
-}
+    <mesh>
+      <boxGeometry />
+      <meshStandardMaterial>
+        <RenderTexture attach="map">
+          <PerspectiveCamera makeDefault position={[0, 0, 5]} />
+          <color attach="background" args={["#BCF9D8"]} />
+          <Text fontSize={3} color="#555">
+            ?
+          </Text>
+        </RenderTexture>
+      </meshStandardMaterial>
+    </mesh>
+  );
+};
 
-useGLTF.preload('/mkib.gltf')
+export default Cube;
