@@ -53,23 +53,9 @@ const Title = styled.h1`
   }
 `;
 
-const WhatWeDo = styled.div`
-  display: flex;
-  align-items: center;
-  gap: 10px;
-`;
-
-const Line = styled.img`
-  height: 5px;
-`;
-
-const Subtitle = styled.h2`
-  color: #da4ea2;
-`;
-
 const Desc = styled.p`
   font-size: 24px;
-  color: lightgray;
+  color: white;
   @media only screen and (max-width: 768px) {
     padding: 20px;
     text-align: center;
@@ -126,13 +112,11 @@ const Hero = () => {
       <Navbar />
       <Container>
         <Left>
-          <Title>Think. Make. Solve.</Title>
-          <WhatWeDo>
-            <Line src="./img/line.png" />
-            <Subtitle>What we Do</Subtitle>
-          </WhatWeDo>
+          <Title>Chasing My Future Self</Title>
           <Desc>
-            we enjoy creating delightful, human-centered digital experiences.
+            "I'm never gonna be my hero. I'm not gonna attain that. I know I'm not,
+            and that's just fine with me because that keeps me with somebody to keep on chasing."
+            - Matthew McConaughey
           </Desc>
           <Button>Learn More</Button>
         </Left>
@@ -142,9 +126,9 @@ const Hero = () => {
               <OrbitControls enableZoom={false} />
               <ambientLight intensity={1} />
               <directionalLight position={[3, 2, 1]} />
-              <Sphere args={[1, 100, 200]} scale={2.4}>
+              <Sphere args={[1, 100, 200]} scale={2.1}>
                 <MeshDistortMaterial
-                  color="#3d1c56"
+                  color="#57B7F2"
                   attach="material"
                   distort={0.5}
                   speed={2}
@@ -152,7 +136,7 @@ const Hero = () => {
               </Sphere>
             </Suspense>
           </Canvas>
-          <Img src="./img/moon.png" />
+          {/* <Img src="./img/jackie.png" /> */}
         </Right>
       </Container>
     </Section>

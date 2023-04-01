@@ -48,23 +48,9 @@ const Right = styled.div`
   }
 `;
 
-const WhatWeDo = styled.div`
-  display: flex;
-  align-items: center;
-  gap: 10px;
-`;
-
-const Line = styled.img`
-  height: 5px;
-`;
-
-const Subtitle = styled.h2`
-  color: #da4ea2;
-`;
-
 const Desc = styled.p`
   font-size: 24px;
-  color: lightgray;
+  color: white;
 `;
 
 const Button = styled.button`
@@ -93,14 +79,10 @@ const Who = () => {
           </Canvas>
         </Left>
         <Right>
-          <Title>Think outside the square space</Title>
-          <WhatWeDo>
-            <Line src="./img/line.png" />
-            <Subtitle>Who we Are</Subtitle>
-          </WhatWeDo>
+          <Title>Who am I?</Title>
           <Desc>
-            a creative group of designers and developers with a passion for the
-            arts.
+            By day, I'm your programmer extraordinaire. But by night, I'm a disc golfing champion, a Mario Karting master, and a dad-joke connoisseur.
+            I'm a man of many talents, you see. So, if you need a code wizard who can also throw a mean frisbee and dominate Rainbow Road, look no further.
           </Desc>
           <Button>See our works</Button>
         </Right>
