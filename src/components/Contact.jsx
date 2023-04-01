@@ -1,7 +1,6 @@
 import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import styled from "styled-components";
-import Map from "./Map";
 
 const Section = styled.div`
   height: 100vh;
@@ -14,16 +13,7 @@ const Container = styled.div`
   display: flex;
   justify-content: space-between;
   gap: 50px;
-`;
-
-const Left = styled.div`
-  flex: 1;
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  @media only screen and (max-width: 768px) {
-    justify-content: center;
-  }
+  
 `;
 
 const Title = styled.h1`
@@ -65,14 +55,6 @@ const Button = styled.button`
   padding: 20px;
 `;
 
-const Right = styled.div`
-  flex: 1;
-
-  @media only screen and (max-width: 768px) {
-    display: none;
-  }
-`;
-
 const Contact = () => {
   const ref = useRef();
   const [success, setSuccess] = useState(null);
@@ -101,6 +83,7 @@ const Contact = () => {
   return (
     <Section>
       <Container>
+<<<<<<< Updated upstream
         <Left>
           <Form ref={ref} onSubmit={handleSubmit}>
             <Title>Contact Us</Title>
@@ -119,6 +102,21 @@ const Contact = () => {
         <Right>
           <Map />
         </Right>
+=======
+        <Form ref={ref} onSubmit={handleSubmit}>
+          <Title>Contact Us</Title>
+          <Input placeholder="Name" name="name" />
+          <Input placeholder="Email" name="email" />
+          <TextArea
+            placeholder="Write your message"
+            name="message"
+            rows={10}
+          />
+          <Button type="submit">Send</Button>
+          {success &&
+            "Your message has been sent. We'll get back to you soon :)"}
+        </Form>
+>>>>>>> Stashed changes
       </Container>
     </Section>
   );
