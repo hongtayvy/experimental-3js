@@ -1,7 +1,7 @@
 import React, { Suspense } from "react";
 import { OrbitControls, Stage } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
-import Shoe from "./Shoe";
+import Nam90 from "./Nam90";
 import styled from "styled-components";
 
 const Desc = styled.div`
@@ -29,7 +29,7 @@ const ProductDesign = () => {
       <Canvas>
         <Suspense fallback={null}>
           <Stage environment="city" intensity={0.6}>
-            <Shoe />
+            <Nam90 />
           </Stage>
           <OrbitControls enableZoom={false} autoRotate />
         </Suspense>
